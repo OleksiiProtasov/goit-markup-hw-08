@@ -1,0 +1,101 @@
+    //header
+    .header-scn {
+        border-bottom: 1px solid #ECECEC;
+        &__box {
+            @include centering();
+        }
+    }
+    
+    .site-nav {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        &__logo {
+            margin-right: 93px;
+        }
+        &__item:not(:last-child) {
+            margin-right: 50px;
+        }
+        & .link .current {
+            color: rgb(150, 130, 238);
+        }
+    }
+    
+    .logo-web {
+        @include logo($baseColor, Raleway);
+    }
+    
+    .logo-studio {
+        @include logo($prime-text-color, Raleway);
+    }
+    
+    .site-nav__link {
+        position: relative;
+        color: $prime-text-color;
+        padding: 32px 0;
+        @extend %navigation-text-style;
+        @include animation(color);
+        &:hover,
+        &:focus {
+            color: $baseColor;
+        }
+        &:active {
+            color: rgb(255, 0, 0);
+        }
+        &::after,
+        &--current::after {
+            content: '';
+            position: absolute;
+            opacity: 0;
+            display: block;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $baseColor;
+            @include animation (all);
+            transition-delay: 250ms;
+        }
+        &:hover::after,
+        &:focus::after,
+        &--current::after {
+            opacity: 1;
+        }
+    }
+    
+    .connect-box {
+        display: flex;
+        margin-left: auto;
+        padding-inline-start: 0;
+        &__mail,
+        &__tel {
+            display: inline-flex;
+            align-items: center;
+            padding: 32px 0;
+            font-family: Roboto;
+            text-decoration: none;
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.02em;
+            color: $connectColor;
+            @include animation (all);
+            &:focus,
+            &:hover,
+            &:focus .connect-box__icon,
+            &:hover .connect-box__icon {
+                fill: $baseColor;
+                color: $baseColor;
+            }
+        }
+        &__icon {
+            margin-right: 10px;
+            fill: $connectColor;
+        }
+    }
