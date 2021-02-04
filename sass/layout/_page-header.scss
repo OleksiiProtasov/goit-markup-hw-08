@@ -1,18 +1,31 @@
-                        .header-scn {
+                        .header-body {
                             position: relative;
                             border-bottom: 1px solid #ECECEC;
                             z-index: 5;
-                            &__box {
-                                // @include centering();
-                            }
                         }
                         
                         .nav {
                             display: flex;
-                            align-items: center;
                             justify-content: space-between;
                             min-height: 60px;
+                            align-items: center;
+                            &__logo {
+                                display: flex;
+                                flex-direction: row;
+                            }
+                            @media screen and (min-width: 768px) {
+                                height: 80px;
+                                &__logo {
+                                    z-index: 9;
+                                }
+                            }
                         }
+                        
+                        @media screen and (min-width:480px) {}
+                        
+                        @media screen and (min-width:768px) {}
+                        
+                        @media screen and (min-width:1200px) {}
                         
                         .logo-web {
                             @include logo($baseColor, Raleway);
@@ -28,6 +41,10 @@
                             width: 40px;
                             height: 40px;
                             z-index: 9;
+                            &:hover,
+                            &:focus {
+                                fill: #2196F3;
+                            }
                             &__close {
                                 display: none;
                             }
@@ -37,7 +54,9 @@
                             &.is-open .button-burger__menu {
                                 display: none;
                             }
-                            &__menu {}
+                            @media screen and (min-width:767.9px) {
+                                display: none;
+                            }
                         }
                         
                         .menu-container {
@@ -47,58 +66,91 @@
                             left: 0;
                             width: 100%;
                             background-color: $prime-background-color;
-                            padding: 20px;
-                            text-align: center;
+                            padding: 40px;
                             font-size: 20px;
                             z-index: 8;
                             &.is-open {
                                 display: block;
                             }
+                            @media screen and (min-width:768px) {
+                                display: flex;
+                                position: static;
+                                padding: 0;
+                                align-items: center;
+                                justify-content: space-around;
+                            }
+                            @media screen and (min-width:1200px) {
+                                align-items: baseline;
+                            }
                         }
                         
-                        .site-nav__link {
-                            position: relative;
-                            color: $prime-text-color;
-                            padding: 32px 0;
-                            @extend %header-font-link;
-                            @include animation(color);
-                            &:hover,
-                            &:focus {
-                                color: $baseColor;
+                        .site-nav {
+                            text-align: start;
+                            &__item:not(:last-child) {
+                                padding-bottom: $padding-header-mobile;
+                                @media screen and (min-width: 768px) {
+                                    padding-bottom: 0;
+                                    padding-right: 50px;
+                                }
                             }
-                            &:active {
-                                color: rgb(255, 0, 0);
+                            &__link {
+                                color: $prime-text-color;
+                                @extend %header-font-link-mobile;
+                                @include animation(color);
+                                &:hover,
+                                &:focus {
+                                    color: $baseColor;
+                                }
+                                &:active {
+                                    color: rgb(255, 0, 0);
+                                }
+                                // &--current::after {
+                                //     content: '';
+                                //     position: absolute;
+                                //     opacity: 0;
+                                //     display: block;
+                                //     bottom: 0;
+                                //     width: 100%;
+                                //     height: 4px;
+                                //     border-radius: 2px;
+                                //     background-color: $baseColor;
+                                //     @include animation (all);
+                                //     transition-delay: 250ms;
+                                // }
+                                // &:hover::after,
+                                // &:focus::after,
+                                // &--current::after {
+                                //     opacity: 1;
+                                // }
                             }
-                            // &::after,
-                            // &--current::after {
-                            //     content: '';
-                            //     position: absolute;
-                            //     opacity: 0;
-                            //     display: block;
-                            //     bottom: 0;
-                            //     width: 100%;
-                            //     height: 4px;
-                            //     border-radius: 2px;
-                            //     background-color: $baseColor;
-                            //     @include animation (all);
-                            //     transition-delay: 250ms;
-                            // }
-                            // &:hover::after,
-                            // &:focus::after,
-                            // &--current::after {
-                            //     opacity: 1;
-                            // }
+                            @media screen and (min-width:768px) {
+                                display: flex;
+                                margin-left: auto;
+                            }
                         }
                         
                         .connect-box {
-                            // display: flex;
-                            // flex-direction: column-reverse;
-                            margin-top: auto;
+                            display: flex;
+                            flex-direction: column-reverse;
+                            text-align: start;
                             padding-inline-start: 0;
+                            @media screen and (max-width: 767.9px) {
+                                flex-direction: column-reverse;
+                            }
+                            &__item {
+                                padding-bottom: $padding-header-mobile;
+                                @media screen and (min-width: 768px) {
+                                    padding-bottom: 0;
+                                }
+                            }
                             &__mail {
                                 @extend %header-mob-font-style-mail;
                                 color: $connectColor;
                                 @include animation (all);
+                                padding-bottom: $padding-header-mobile;
+                                @media screen and (min-width: 768px) {
+                                    padding-bottom: 10px;
+                                }
                             }
                             &__tel {
                                 @extend %header-mob-font-style-tel;
@@ -111,21 +163,68 @@
                                 //     fill: $baseColor;
                                 //     color: $baseColor;
                                 // }
+                                @media screen and (min-width: 768px) {
+                                    color: $connectColor;
+                                }
                             }
                             &__icon {
                                 display: none;
                                 margin-right: 10px;
                                 fill: $connectColor;
+                                @media screen and (min-width: 768px) {
+                                    display: block;
+                                }
+                            }
+                            @media screen and (min-width: 768px) {
+                                margin-left: auto;
+                                display: inline-flex;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                &__tel {
+                                    display: flex;
+                                    align-items: center;
+                                    &:focus,
+                                    &:hover,
+                                    &:focus .connect-box__icon,
+                                    &:hover .connect-box__icon {
+                                        fill: $baseColor;
+                                        color: $baseColor;
+                                    }
+                                }
+                                &__mail {
+                                    display: flex;
+                                    align-items: center;
+                                    &:focus,
+                                    &:hover,
+                                    &:focus .connect-box__icon,
+                                    &:hover .connect-box__icon {
+                                        fill: $baseColor;
+                                        color: $baseColor;
+                                    }
+                                }
+                            }
+                            @media screen and (min-width:1200px) {
+                                flex-direction: row;
+                                &__mail {
+                                    padding-right: 30px;
+                                    padding-bottom: 0;
+                                }
                             }
                         }
                         
-                        .header-social-box {}
-                        
                         .header-social {
-                            // display: flex;
-                            // flex-direction: row;
+                            display: flex;
+                            justify-content: space-between;
+                            padding-top: $padding-header-mobile;
                             &__link {
                                 color: $baseColor;
                                 @extend %header-social-link-style;
+                            }
+                            &__border {
+                                border: 1px solid rgba(33, 33, 33, 0.2);
+                                transform: rotate(0deg);
+                            }
+                            @media screen and (min-width:767.9px) {
+                                display: none;
                             }
                         }

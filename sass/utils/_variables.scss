@@ -1,3 +1,7 @@
 $card-set-gap:30px;
 $transition-duration:250ms;
 $transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+$padding-header-mobile:32px;
+@media screen and (mix-width: 480px) {
+    $padding-header-mobile: 0;
+}

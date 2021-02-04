@@ -17,7 +17,7 @@
    // min-width:480px;
    .our-client-list {
        display: flex;
-       //    flex-wrap: wrap;
+       flex-wrap: wrap;
        &__item {
            width: calc((100% - 2 * 30px) / 2);
            margin-right: 30px;
