@@ -1,0 +1,21 @@
+@mixin centering ($flex: flex) {
+    display: $flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin logo ($color, $font) {
+    color: $color;
+    font-family: $font;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
+@mixin animation ($part) {
+    transition-property: $part;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

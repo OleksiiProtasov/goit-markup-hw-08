@@ -1,0 +1,37 @@
+.hero-scn {
+    outline: 1px solid black;
+    background: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../photo/hero/overlay.jpg), #2F303A;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 118px;
+    &__box {
+        text-align: center;
+        &__title {
+            padding-top: 118px;
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: $prime-background-color;
+            font-family: Roboto;
+            font-size: 44px;
+            font-weight: 900;
+            line-height: 60px;
+            letter-spacing: 0.06em;
+        }
+    }
+}
+
+.hero-btn {
+    border-color: #2196F3;
+    color: $prime-background-color;
+    width: 200px;
+    height: 50px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: transparent;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}

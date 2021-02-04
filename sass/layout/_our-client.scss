@@ -1,0 +1,45 @@
+   //  наши клиенты    
+   .our-client-scn {
+       display: flex;
+       justify-content: space-between;
+       &__title {
+           margin: 0 auto 50px;
+           font-family: Roboto;
+           font-weight: bold;
+           font-size: 36px;
+           line-height: 42px;
+           text-align: center;
+           letter-spacing: 0.03em;
+           color: #212121;
+       }
+   }
+   
+   // min-width:480px;
+   .our-client-list {
+       display: flex;
+       //    flex-wrap: wrap;
+       &__item {
+           width: calc((100% - 2 * 30px) / 2);
+           margin-right: 30px;
+           &:nth-child(2n) {
+               margin-right: 0;
+           }
+       }
+       &__link {
+           display: inline-flex;
+           justify-content: center;
+           align-items: center;
+           box-sizing: border-box;
+           fill: $colorSocialLink;
+           border: 1px solid $colorSocialLink;
+           width: 170px;
+           height: 90px;
+           border-radius: 4px;
+           @include animation (fill);
+           &:focus,
+           &:hover {
+               border-color: $baseColor;
+               fill: $baseColor;
+           }
+       }
+   }
