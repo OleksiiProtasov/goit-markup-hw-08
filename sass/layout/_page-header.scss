@@ -1,7 +1,10 @@
                         .header-body {
-                            position: relative;
+                            position: fixed;
                             border-bottom: 1px solid #ECECEC;
+                            top: 0;
+                            width: 100%;
                             z-index: 5;
+                            background-color: $prime-background-color;
                         }
                         
                         .nav {
@@ -12,6 +15,7 @@
                             &__logo {
                                 display: flex;
                                 flex-direction: row;
+                                margin-right: 90px;
                             }
                             @media screen and (min-width: 768px) {
                                 height: 80px;
@@ -40,6 +44,7 @@
                             background-color: transparent;
                             width: 40px;
                             height: 40px;
+                            // padding: 10px;
                             z-index: 9;
                             &:hover,
                             &:focus {
@@ -69,8 +74,13 @@
                             padding: 40px;
                             font-size: 20px;
                             z-index: 8;
+                            overflow-y: scroll;
                             &.is-open {
                                 display: block;
+                                position: fixed;
+                            }
+                            @media screen and (max-width:767.9px) {
+                                height: 100vh;
                             }
                             @media screen and (min-width:768px) {
                                 display: flex;
@@ -86,6 +96,7 @@
                         
                         .site-nav {
                             text-align: start;
+                            padding-bottom: 300px;
                             &__item:not(:last-child) {
                                 padding-bottom: $padding-header-mobile;
                                 @media screen and (min-width: 768px) {
@@ -125,7 +136,8 @@
                             }
                             @media screen and (min-width:768px) {
                                 display: flex;
-                                margin-left: auto;
+                                // margin-left: auto;
+                                padding-bottom: 0;
                             }
                         }
                         

@@ -62,6 +62,22 @@
     letter-spacing: 0.02em;
 }
 
+%font-feature-title {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+}
+
+%font-feature-text {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+}
+
 %footer-title {
     color: $prime-background-color;
     font-family: Roboto;
@@ -70,6 +86,24 @@
     line-height: 16px;
     letter-spacing: 0.03em;
     text-align: left;
+}
+
+%font-text-btn {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+}
+
+%font-text-input {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
 }
 
 %navigation-text-style {

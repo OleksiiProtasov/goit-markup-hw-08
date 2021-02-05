@@ -2,24 +2,27 @@
     background-color: $footer-Container-Color;
     &__general-box {
         text-align: center;
+        padding: 60px 15px;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+        @media screen and (min-width: 1200px) {
+            text-align: start;
+        }
     }
 }
 
-// .logo-web-foot {
-//     @include logo($baseColor, Raleway);
-// }
-// .logo-studio-foot {
-//     @include logo ($prime-background-color, Raleway);
-// }
-// @media screen and (min-width:480px) {
-//     .footer__general-box {}
-// }
-// @media screen and (min-width:768px) {
-//     .footer__general-box {}
-// }
-// @media screen and (min-width:1200px) {
-//     .footer__general-box {}
-// }
+.logo-web-foot {
+    @include logo($baseColor, Raleway);
+}
+
+.logo-studio-foot {
+    @include logo ($prime-background-color, Raleway);
+}
+
 .connect {
     &__address {
         font-family: Roboto;
@@ -30,9 +33,9 @@
         font-style: normal;
         color: $prime-background-color;
     }
-    // &__item:not(:last-child) {
-    //     margin-bottom: 9px;
-    // }
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
     &__how-connect-link-footer {
         font-family: Roboto;
         font-size: 14px;
@@ -47,7 +50,6 @@
     &__title {
         @extend %footer-title
     }
-    &__item {}
     &__link {
         fill: $prime-background-color;
         width: 44px;
@@ -62,29 +64,85 @@
     }
 }
 
-// //subscribe
+.general-social-link-box {
+    &__title {
+        text-align: center;
+        @extend %footer-title;
+        @media screen and (min-width: 1200px) {
+            text-align: start;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        display: inline-flex;
+        justify-content: center;
+    }
+    &__link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        fill: $prime-background-color;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        @include animation(background-color);
+        &:focus,
+        &:hover {
+            background-color: $baseColor;
+        }
+    }
+}
+
+//subscribe
 .subscribe-box {
+    text-align: center;
+    margin-top: 60px;
+    align-items: baseline;
     &__title {
         @extend %footer-title;
+        text-align: center;
+        @media screen and (min-width: 1200px) {
+            text-align: start;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+        margin-top: 0;
     }
 }
 
 .subscribe-box-form {
+    // width: 450px;
+    // box-sizing: content-box;
     &__input-form {
-        // padding-left: 16px;
+        padding-left: 16px;
         // margin-right: 12px;
-        width: 360px;
+        width: 450px;
         height: 50px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        @extend %font-text-input;
         border-radius: 4px;
         background-color: $footer-Container-Color;
         color: whitesmoke;
+        @extend %font-text-input;
+        @media screen and (min-width: 1200px) {
+            width: 370px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        display: inline-flex;
     }
 }
 
 //subscribe button
 .subscribe-btn {
+    margin-top: 20px;
+    margin-left: 12px;
     width: 200px;
     height: 50px;
     background-color: $baseColor;
@@ -99,12 +157,7 @@
         justify-content: center;
     }
     &__title {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 30px;
-        letter-spacing: 0.06em;
+        @extend %font-text-btn;
         color: $prime-background-color;
     }
     &__svg {
@@ -115,110 +168,8 @@
     &:focus {
         cursor: pointer;
     }
+    @media screen and (min-width: 1200px) {
+        margin-top: 0;
+        margin-right: auto;
+    }
 }
-
-// .connect {
-//     &__address {
-//         padding-top: 20px;
-//         padding-bottom: 9px;
-//         font-family: Roboto;
-//         font-size: 14px;
-//         font-weight: 400;
-//         line-height: 24px;
-//         letter-spacing: 0.03em;
-//         font-style: normal;
-//         color: $prime-background-color;
-//     }
-//     &__item:not(:last-child) {
-//         margin-bottom: 9px;
-//     }
-//     &__how-connect-link-footer {
-//         font-family: Roboto;
-//         font-size: 14px;
-//         font-weight: 400;
-//         line-height: 24px;
-//         letter-spacing: 0.03em;
-//         text-align: left;
-//         color: rgba(255, 255, 255, 0.8);
-//     }
-// }
-// .general-social-link-box {
-//     &__title {
-//         text-align: center;
-//         @extend %footer-title
-//     }
-//     &__item {
-//         display: inline-flex;
-//         justify-content: center;
-//     }
-//     &__link {
-//         display: inline-flex;
-//         justify-content: center;
-//         align-items: center;
-//         fill: $prime-background-color;
-//         width: 44px;
-//         height: 44px;
-//         border-radius: 50%;
-//         background-color: rgba(255, 255, 255, 0.1);
-//         @include animation(background-color);
-//         &:focus,
-//         &:hover {
-//             background-color: $baseColor;
-//         }
-//     }
-// }
-// // //subscribe
-// .subscribe-box {
-//     text-align: center;
-//     &__title {
-//         @extend %footer-title;
-//         text-align: center;
-//     }
-// }
-// .subscribe-box-form {
-//     &__input-form {
-//         padding-left: 16px;
-//         width: 360px;
-//         height: 50px;
-//         box-sizing: border-box;
-//         border: 1px solid rgba(255, 255, 255, 0.3);
-//         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-//         border-radius: 4px;
-//         margin-right: 12px;
-//         background-color: $footer-Container-Color;
-//         color: whitesmoke;
-//     }
-// }
-// //subscribe button
-// .subscribe-btn {
-//     width: 200px;
-//     height: 50px;
-//     background-color: $baseColor;
-//     border-color: $baseColor;
-//     background: #2196F3;
-//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-//     cursor: pointer;
-//     border-radius: 4px;
-//     &__label {
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//     }
-//     &__title {
-//         font-family: Roboto;
-//         font-style: normal;
-//         font-weight: bold;
-//         font-size: 16px;
-//         line-height: 30px;
-//         letter-spacing: 0.06em;
-//         color: $prime-background-color;
-//     }
-//     &__svg {
-//         margin-left: 10px;
-//         fill: $prime-background-color;
-//     }
-//     &:hover,
-//     &:focus {
-//         cursor: pointer;
-//     }
-// }
