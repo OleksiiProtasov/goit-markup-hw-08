@@ -1,64 +1,85 @@
- //  our team    
- .our-team-scn {
-     background-color: #F5F4FA;
-     &__title {
-         margin: 0;
-         padding-bottom: 50px;
-         font-family: Roboto;
-         font-size: 36px;
-         font-weight: 700;
-         line-height: 42px;
-         letter-spacing: 0.03em;
-         text-align: center;
-     }
- }
- 
- // .our-team-card-list {}
- .staff-card {
-     background-color: $prime-background-color;
-     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-     border-radius: 0px 0px 4px 4px;
-     &:not(:last-child) {
-         margin-bottom: 30px;
-     }
-     &__about {
-         padding-top: 30px;
-         padding-bottom: 30px;
-     }
-     &__name {
-         text-align: center;
-         @extend %name-text;
-     }
-     &__profession {
-         text-align: center;
-         @extend %about-text;
-     }
- }
- 
- //  соц сети команды  
- .master-social {
-     text-align: center;
-     &__item {
-         display: inline-flex;
-         display: inline-flex;
-         justify-content: center;
-         &:not(:last-child) {
-             margin-right: 10px;
-         }
-     }
-     &__link {
-         display: inline-flex;
-         justify-content: center;
-         align-items: center;
-         width: 44px;
-         height: 44px;
-         border-radius: 50%;
-         @include animation(all);
-         fill: $colorSocialLink;
-         &:hover,
-         &:focus {
-             background-color: $baseColor;
-             fill: #ffffff
-         }
-     }
- }
+  .our-team-scn {
+      background-color: #F5F4FA;
+      &__title {
+          margin: 0;
+          padding-bottom: 50px;
+          font-family: Roboto;
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 42px;
+          letter-spacing: 0.03em;
+          text-align: center;
+      }
+  }
+  
+  .our-team-card-list {
+      @media screen and (min-width: 768px) {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+  }
+  
+  .staff-card {
+      background-color: $prime-background-color;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+      margin-bottom: 30px;
+      &__about {
+          padding-top: 30px;
+          padding-bottom: 30px;
+      }
+      &__name {
+          text-align: center;
+          @extend %name-text;
+      }
+      &__profession {
+          text-align: center;
+          @extend %about-text;
+      }
+  }
+  
+  @media screen and (min-width:768px) {
+      .staff-card {
+          width: calc((100% - 2 * 30px) / 2);
+      }
+      .staff-card:nth-child(-n+2) {
+          margin-bottom: 30px;
+      }
+  }
+  
+  @media screen and (min-width:1200px) {
+      .staff-card {
+          width: calc((100% - 5 * 30px) / 4);
+      }
+      .staff-card:nth-child(-n+2) {
+          margin-bottom: 0;
+      }
+  }
+  
+  .master-social {
+      text-align: center;
+      &__item {
+          display: inline-flex;
+          display: inline-flex;
+          justify-content: center;
+          &:not(:last-child) {
+              margin-right: 10px;
+          }
+      }
+      &__link {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          @include animation(all);
+          fill: $colorSocialLink;
+          &:hover,
+          &:focus {
+              background-color: $baseColor;
+              fill: #ffffff
+          }
+      }
+  }

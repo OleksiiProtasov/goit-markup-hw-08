@@ -1,11 +1,11 @@
-// стили portfolios buttons 
 .portfolio-scr {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 140px;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 174px;
+        padding-bottom: 94px;
+    }
 }
-
-
-/* buttons */
 
 .portfolio-btn {
     margin-bottom: 50px;
@@ -54,17 +54,30 @@
     }
 }
 
-//  коробка с фото    
 .thumb-list {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -1 * $card-set-gap;
-    margin-top: -1 * $card-set-gap;
+    justify-content: center;
+    @media screen and (min-width: 767.9px) {
+        justify-content: space-between;
+    }
+    // @media screen and (min-width: 1200px) {
+    //     margin-left: -1 * $card-set-gap;
+    //     margin-top: -1 * $card-set-gap;
+    // }
     &__item {
-        display: block;
-        flex-basis: calc(100% / 3 - $card-set-gap);
-        margin-left: $card-set-gap;
-        margin-top: $card-set-gap;
+        margin-bottom: 30px;
+        @media screen and (max-width: 1199px) {}
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 2 * 30px) / 2);
+        }
+        // // @media screen and (min-width: 1200px) {
+        // //     margin-left: $card-set-gap;
+        // //     margin-top: $card-set-gap;
+        // }
+        @media screen and (min-width: 1200px) {
+            width: calc((100% - 2 * 30px) / 3);
+        }
     }
     &__link {
         position: relative;
@@ -112,12 +125,15 @@
     }
 }
 
-//our projects 
 .text-container {
-    padding: 20px 24px;
+    padding: 20px 24px 20px 24px;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
+    &:first-child {
+        margin: 100px;
+        padding: 20px 24px 53px 24px;
+    }
     &__title {
         margin: 0;
         font-family: Roboto;
