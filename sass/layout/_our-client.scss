@@ -1,7 +1,13 @@
            //  наши клиенты    
            .our-client-scn {
+               padding-top: 60px;
+               padding-bottom: 60px;
                display: flex;
                justify-content: space-between;
+               @media screen and(min-width: 1999.9px) {
+                   padding-top: 94px;
+                   padding-bottom: 94px;
+               }
                &__title {
                    margin: 0 auto 50px;
                    font-family: Roboto;

@@ -1,5 +1,11 @@
   .our-team-scn {
+      padding-top: 60px;
+      padding-bottom: 60px;
       background-color: #F5F4FA;
+      @media screen and(min-width: 1999.9px) {
+          padding-top: 94px;
+          padding-bottom: 94px;
+      }
       &__title {
           margin: 0;
           padding-bottom: 50px;
@@ -43,16 +49,13 @@
       .staff-card {
           width: calc((100% - 2 * 30px) / 2);
       }
-      .staff-card:nth-child(-n+2) {
-          margin-bottom: 30px;
-      }
   }
   
   @media screen and (min-width:1200px) {
       .staff-card {
           width: calc((100% - 5 * 30px) / 4);
       }
-      .staff-card:nth-child(-n+2) {
+      .staff-card {
           margin-bottom: 0;
       }
   }
