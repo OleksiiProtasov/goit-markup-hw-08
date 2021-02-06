@@ -25,6 +25,8 @@
 
 .connect {
     &__address {
+        margin-top: 20px;
+        margin-bottom: 9px;
         font-family: Roboto;
         font-size: 14px;
         font-weight: 400;
@@ -118,8 +120,7 @@
 .subscribe-box-form {
     &__input-form {
         padding-left: 16px;
-        max-width: 450px;
-        width: 450px;
+        width: 100%;
         height: 50px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -128,6 +129,9 @@
         background-color: $footer-Container-Color;
         color: whitesmoke;
         @extend %font-text-input;
+        @media screen and (min-width: 767.9px) {
+            width: 450px;
+        }
         @media screen and (min-width: 1200px) {
             width: 370px;
         }

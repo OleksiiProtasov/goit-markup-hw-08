@@ -25,12 +25,9 @@
                             }
                         }
                         
-                        @media screen and (min-width:480px) {}
-                        
-                        @media screen and (min-width:768px) {}
-                        
-                        @media screen and (min-width:1200px) {}
-                        
+                        // @media screen and (min-width:480px) {}
+                        // @media screen and (min-width:768px) {}
+                        // @media screen and (min-width:1200px) {}
                         .logo-web {
                             @include logo($baseColor, Raleway);
                         }
@@ -75,12 +72,12 @@
                             font-size: 20px;
                             z-index: 8;
                             overflow-y: scroll;
-                            &.is-open {
-                                display: block;
-                                position: fixed;
-                            }
-                            @media screen and (max-width:767.9px) {
+                            @media screen and (max-width: 767.9px) {
                                 height: 100vh;
+                                &.is-open {
+                                    display: block;
+                                    position: fixed;
+                                }
                             }
                             @media screen and (min-width:768px) {
                                 display: flex;
@@ -116,31 +113,32 @@
                                 &:active {
                                     color: rgb(255, 0, 0);
                                 }
-                                // @media screen and (min-width:768px) {
-                                //     &--current::after {
-                                //         content: '';
-                                //         position: absolute;
-                                //         opacity: 0;
-                                //         display: block;
-                                //         bottom: 0;
-                                //         width: 100%;
-                                //         height: 4px;
-                                //         border-radius: 2px;
-                                //         background-color: $baseColor;
-                                //         @include animation (all);
-                                //         transition-delay: 250ms;
-                                //     }
-                                //     &:hover::after,
-                                //     &:focus::after,
-                                //     &--current::after {
-                                //         opacity: 1;
-                                //     }
-                                // }
                             }
                             @media screen and (min-width:768px) {
                                 display: flex;
                                 // margin-left: auto;
                                 padding-bottom: 0;
+                            }
+                        }
+                        
+                        @media screen and (min-width:768px) {
+                            .site-nav__link--current::after {
+                                content: '';
+                                position: absolute;
+                                opacity: 0;
+                                display: block;
+                                bottom: 0;
+                                width: 100%;
+                                height: 4px;
+                                border-radius: 2px;
+                                background-color: $baseColor;
+                                @include animation (all);
+                                transition-delay: 250ms;
+                            }
+                            &:hover::after,
+                            &:focus::after,
+                            &--current::after {
+                                opacity: 1;
                             }
                         }
                         
