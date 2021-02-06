@@ -348,6 +348,11 @@ img {
     height: auto;
 }
 
+html {
+    line-height: 0;
+    -webkit-text-size-adjust: 100%;
+}
+
 // * {
 //     overflow-x: hidden;
 // }

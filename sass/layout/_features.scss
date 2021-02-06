@@ -6,12 +6,16 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: -1 * $card-set-gap;
+    margin-left: -1 * $card-set-gap;
     &__item {
+        margin-top: $card-set-gap;
+        margin-left: $card-set-gap;
         @media screen and (min-width: 768px) {
             width: calc((100% - 2 * 30px) / 2);
         }
-        @media screen and (min-width:1200px) {
-            width: calc((100% - 2 * 30px) / 4);
+        @media screen and (min-width: 1200px) {
+            width: calc((100% - 4 * 30px) / 4);
         }
     }
     &__box {
