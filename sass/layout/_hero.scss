@@ -6,6 +6,9 @@
     background-position: center;
     background-repeat: no-repeat;
     padding-bottom: 118px;
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 200px;
+    }
     &__box {
         text-align: center;
         &__title {
@@ -18,12 +21,15 @@
             font-weight: 900;
             line-height: 60px;
             letter-spacing: 0.06em;
+            @media screen and (min-width: 1200px) {
+                padding-top: 200px;
+            }
         }
     }
     @media screen and (min-width: 768px) {
         margin-top: 80px;
     }
-    @media screen and (min-width: 1199.9px) {
+    @media screen and (min-width: 1200px) {
         margin-top: 80px;
         margin-bottom: 94px;
     }
