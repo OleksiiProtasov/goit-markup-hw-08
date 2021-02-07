@@ -29,7 +29,7 @@
     }
     &__title {
         text-align: center;
-        @extend %font-feature-title;
+        @extend %font-mini-title;
     }
     &__text {
         @extend %font-feature-text;
