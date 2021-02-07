@@ -340,8 +340,9 @@
             <div class="subscribe-box ">
                 <h3 class="subscribe-box__title ">ПОДПИШИСЬ НА РАССЫЛКУ</h3>
                 <div class="subscribe-box-form ">
-                    <form class=" " action="distribution ">
-                        <input class="subscribe-box-form__input-form " type="mail " name="mail " id="distribution " placeholder="E-mail ">
+                    <form action="distribution ">
+                        <label for="subscribe"></label>
+                        <input class="subscribe-box-form__input-form " type="mail " name="mail " id="subscribe " placeholder="E-mail ">
                     </form>
                 </div>
                 <button class="subscribe-btn "> 
@@ -354,20 +355,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        (() => {
-            const menuBtnRef = document.querySelector("[data-menu-button]");
-            const mobileMenuRef = document.querySelector("[data-menu]");
 
-            menuBtnRef.addEventListener("click", () => {
-                const expanded =
-                    menuBtnRef.getAttribute("aria-expanded ") === "true" || false;
+    <script src="./js/open-modal.js"></script>
 
-                menuBtnRef.classList.toggle("is-open");
-                menuBtnRef.setAttribute("aria-expanded", !expanded);
-
-                mobileMenuRef.classList.toggle("is-open");
-            });
-        })();
-    </script>
 </body>
