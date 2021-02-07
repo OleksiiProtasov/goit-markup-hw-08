@@ -1090,6 +1090,7 @@ html {
 @media screen and (min-width: 768px) {
   .site-nav__link:after {
     content: '';
+    margin-bottom: -1px;
     position: absolute;
     opacity: 0;
     display: block;
