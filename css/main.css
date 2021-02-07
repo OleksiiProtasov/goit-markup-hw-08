@@ -1268,8 +1268,16 @@ html {
   padding-bottom: 118px;
 }
 
+@media screen and (min-width: 768px) {
+  .hero-scn {
+    margin-top: 80px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero-scn {
+    margin-top: 80px;
+    margin-bottom: 94px;
     padding-bottom: 200px;
   }
 }
@@ -1293,19 +1301,6 @@ html {
 @media screen and (min-width: 1200px) {
   .hero-scn__box__title {
     padding-top: 200px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero-scn {
-    margin-top: 80px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero-scn {
-    margin-top: 80px;
-    margin-bottom: 94px;
   }
 }
 
@@ -1461,6 +1456,11 @@ html {
   line-height: 42px;
   letter-spacing: 0.03em;
   text-align: center;
+}
+
+.our-team-card-list {
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1901,8 +1901,15 @@ html {
 }
 
 .portfolio-scr {
-  padding-top: 140px;
+  padding-top: 120px;
   padding-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-scr {
+    padding-top: 140px;
+    padding-bottom: 94px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1982,9 +1989,9 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: -30px;
   margin-left: -30px;
 }
