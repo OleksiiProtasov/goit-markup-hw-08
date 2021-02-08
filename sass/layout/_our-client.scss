@@ -46,7 +46,7 @@
                    align-items: center;
                    fill: $colorSocialLink;
                    border: 1px solid $colorSocialLink;
-                   min-width: 170px;
+                   //    min-width: 170px;
                    height: 90px;
                    border-radius: 4px;
                    @include animation (fill);

@@ -67,8 +67,12 @@
         margin-bottom: 30px;
         color: $prime-background-color;
         @extend %font-hero-title;
+        @media screen and (min-width: 480px) {
+            width: 360px;
+        }
         @media screen and (min-width: 1200px) {
             padding-top: 200px;
+            width: 700px;
         }
     }
 }

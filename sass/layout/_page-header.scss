@@ -14,16 +14,14 @@
             &__logo {
                 display: flex;
                 flex-direction: row;
-                margin-right: 90px;
+                @media screen and (min-width: 768px) {
+                    margin-right: 90px;
+                    z-index: 9;
+                }
             }
             @media screen and (max-width: 767.9px) {
                 padding-top: 10px;
                 padding-bottom: 10px;
-            }
-            @media screen and (min-width: 768px) {
-                &__logo {
-                    z-index: 9;
-                }
             }
         }
         
@@ -40,8 +38,8 @@
             background-color: transparent;
             width: 40px;
             height: 40px;
-            // padding: 10px;
             z-index: 9;
+            // margin-left: auto;
             &:hover,
             &:focus {
                 fill: #2196F3;
@@ -171,9 +169,6 @@
                     padding-top: $padding-header-mobile;
                     padding-bottom: $padding-header-mobile;
                 }
-                // @media screen and (min-width: 768px) {
-                //     padding-bottom: 0;
-                // }
             }
             &__mail {
                 @extend %header-mob-font-style-mail;
@@ -190,13 +185,6 @@
                 @extend %header-mob-font-style-tel;
                 color: $baseColor;
                 @include animation (all);
-                // &:focus,
-                // &:hover,
-                // &:focus .connect-box__icon,
-                // &:hover .connect-box__icon {
-                //     fill: $baseColor;
-                //     color: $baseColor;
-                // }
                 @media screen and (min-width: 768px) {
                     color: $connectColor;
                 }

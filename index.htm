@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link rel="stylesheet" href="./css/main.min.css">
-    <meta name="distribution" content="Эффективные решения для вашего бизнеса">
+    <link href="main.css" rel="stylesheet">
+    <meta name="Description" content="Эффективные решения для вашего бизнеса">
 </head>
 
 <body>
@@ -82,7 +83,7 @@
         <!--backdrop заливка экрана для модального окна-->
         <div class="backdrop is-hidden" data-backdrop>
             <div class="modal-scr">
-                <button class="modal-btn-close" data-close-modal>
+                <button class="modal-btn-close" data-close-modal aria-label="close modal gap">
                     <svg  width="11" height="11">
                         <use href="./photo/icon.svg#icon-close"></use>
                     </svg>
@@ -122,9 +123,9 @@
                                 </div>
                             </div>
                             <div class="form-field">
-                                <label>
+                                <label for="comments">
                                     <span class="form-field__title">Комментарий</span> </label>
-                                <textarea class="modal-input-area" name="feedback" rows="6" placeholder="Введите текст"></textarea>
+                                <textarea class="modal-input-area" name="feedback" rows="6" id="comments" placeholder="Введите текст"></textarea>
                             </div>
                             <div class="check-policy-box">
                                 <label>
@@ -253,20 +254,20 @@
                             <h3 class="staff-card__name">Игорь Демьяненко</h3>
                             <p class="staff-card__profession">Product Designer</p>
                             <ul class="master-social ">
-                                <li class="item-social master-social__item">
-                                    <a class="master-social-linc master-social__link" href="https://www.instagram.com/"><svg class=".master-social-icon " width="20px " height="20px ">
+                                <li class="item-social master-social__item ">
+                                    <a class="master-social-linc master-social__link " href="https://www.instagram.com/ " aria-label="subscribe instagram"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-instagram "></use></svg></a>
                                 </li>
-                                <li class="item-social master-social__item">
-                                    <a class="master-social-linc master-social__link" href="https://twitter.com/"><svg class=".master-social-icon " width="20px " height="20px ">
+                                <li class="item-social master-social__item ">
+                                    <a class="master-social-linc master-social__link " href="https://twitter.com/ " aria-label="subscribe twitter"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-Group "></use></svg></a>
                                 </li>
-                                <li class="item-social master-social__item">
-                                    <a class="master-social-linc master-social__link" href="https://www.facebook.com/"><svg class=".master-social-icon " width="20px " height="20px ">
+                                <li class="item-social master-social__item ">
+                                    <a class="master-social-linc master-social__link " href="https://www.facebook.com/ " aria-label="subscribe facebook"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-facebook "></use></svg></a>
                                 </li>
-                                <li class="item-social master-social__item">
-                                    <a class="master-social-linc master-social__link" href="https://www.linkedin.com/"><svg class=".master-social-icon " width="20px " height="20px ">
+                                <li class="item-social master-social__item ">
+                                    <a class="master-social-linc master-social__link " href="https://www.linkedin.com/ " aria-label="subscribe linkedin"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-linkedin "></use></svg></a>
                                 </li>
                             </ul>
@@ -286,20 +287,20 @@
                             <h3 class="staff-card__name">Ольга Репина</h3>
                             <p class="staff-card__profession">Frontend Developer</p>
                             <ul class="master-social ">
-                                <li class="item-social master-social__item">
-                                    <a class="master-social-linc master-social__link" href="https://www.instagram.com/"><svg class=".master-social-icon " width="20px " height="20px ">
+                                <li class="item-social master-social__item ">
+                                    <a class="master-social-linc master-social__link " href="https://www.instagram.com/ " aria-label="subscribe instagram"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-instagram "></use></svg></a>
                                 </li>
-                                <li class="item-social master-social__item">
-                                    <a class="master-social-linc master-social__link" href="https://twitter.com/"><svg class=".master-social-icon " width="20px " height="20px ">
+                                <li class="item-social master-social__item ">
+                                    <a class="master-social-linc master-social__link " href="https://twitter.com/ " aria-label="subscribe twitter"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-Group "></use></svg></a>
                                 </li>
-                                <li class="item-social master-social__item">
-                                    <a class="master-social-linc master-social__link" href="https://www.facebook.com/"><svg class=".master-social-icon " width="20px " height="20px ">
+                                <li class="item-social master-social__item ">
+                                    <a class="master-social-linc master-social__link " href="https://www.facebook.com/ " aria-label="subscribe facebook"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-facebook "></use></svg></a>
                                 </li>
-                                <li class="item-social master-social__item">
-                                    <a class="master-social-linc master-social__link" href="https://www.linkedin.com/"><svg class=".master-social-icon " width="20px " height="20px ">
+                                <li class="item-social master-social__item ">
+                                    <a class="master-social-linc master-social__link " href="https://www.linkedin.com/ " aria-label="subscribe linkedin"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-linkedin "></use></svg></a>
                                 </li>
                             </ul>
@@ -319,20 +320,20 @@
                             <h3 class="staff-card__name">Николай Тарасов</h3>
                             <p class="staff-card__profession">Marketing</p>
                             <ul class="master-social ">
-                                <li class="item-social master-social__item">
-                                    <a class="master-social-linc master-social__link" href="https://www.instagram.com/"><svg class=".master-social-icon " width="20px " height="20px ">
+                                <li class="item-social master-social__item ">
+                                    <a class="master-social-linc master-social__link " href="https://www.instagram.com/ " aria-label="subscribe instagram"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-instagram "></use></svg></a>
                                 </li>
-                                <li class="item-social master-social__item">
-                                    <a class="master-social-linc master-social__link" href="https://twitter.com/"><svg class=".master-social-icon " width="20px " height="20px ">
+                                <li class="item-social master-social__item ">
+                                    <a class="master-social-linc master-social__link " href="https://twitter.com/ " aria-label="subscribe twitter"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-Group "></use></svg></a>
                                 </li>
-                                <li class="item-social master-social__item">
-                                    <a class="master-social-linc master-social__link" href="https://www.facebook.com/"><svg class=".master-social-icon " width="20px " height="20px ">
+                                <li class="item-social master-social__item ">
+                                    <a class="master-social-linc master-social__link " href="https://www.facebook.com/ " aria-label="subscribe facebook"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-facebook "></use></svg></a>
                                 </li>
-                                <li class="item-social master-social__item">
-                                    <a class="master-social-linc master-social__link" href="https://www.linkedin.com/"><svg class=".master-social-icon " width="20px " height="20px ">
+                                <li class="item-social master-social__item ">
+                                    <a class="master-social-linc master-social__link " href="https://www.linkedin.com/ " aria-label="subscribe linkedin"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-linkedin "></use></svg></a>
                                 </li>
                             </ul>
@@ -353,19 +354,19 @@
                             <p class="ourprofession staff-card__profession ">UI Designer</p>
                             <ul class="master-social ">
                                 <li class="item-social master-social__item ">
-                                    <a class="master-social-linc master-social__link " href="https://www.instagram.com/ "><svg class=".master-social-icon " width="20px " height="20px ">
+                                    <a class="master-social-linc master-social__link " href="https://www.instagram.com/ " aria-label="subscribe instagram"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-instagram "></use></svg></a>
                                 </li>
                                 <li class="item-social master-social__item ">
-                                    <a class="master-social-linc master-social__link " href="https://twitter.com/ "><svg class=".master-social-icon " width="20px " height="20px ">
+                                    <a class="master-social-linc master-social__link " href="https://twitter.com/ " aria-label="subscribe twitter"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-Group "></use></svg></a>
                                 </li>
                                 <li class="item-social master-social__item ">
-                                    <a class="master-social-linc master-social__link " href="https://www.facebook.com/ "><svg class=".master-social-icon " width="20px " height="20px ">
+                                    <a class="master-social-linc master-social__link " href="https://www.facebook.com/ " aria-label="subscribe facebook"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-facebook "></use></svg></a>
                                 </li>
                                 <li class="item-social master-social__item ">
-                                    <a class="master-social-linc master-social__link " href="https://www.linkedin.com/ "><svg class=".master-social-icon " width="20px " height="20px ">
+                                    <a class="master-social-linc master-social__link " href="https://www.linkedin.com/ " aria-label="subscribe linkedin"><svg class=".master-social-icon " width="20px " height="20px ">
                                         <use href="./photo/icon.svg#icon-linkedin "></use></svg></a>
                                 </li>
                             </ul>
@@ -381,37 +382,37 @@
                 <h3 class="our-client-scn__title ">Постоянные клиенты</h3>
                 <ul class="our-client-list ">
                     <li class="our-client-list__item ">
-                        <a class="our-client-list__link " href="./index.htm ">
+                        <a class="our-client-list__link " href="./index.htm " aria-label="web site client">
                             <svg width="44.27px " height="49.23px ">
                             <use href="./photo/icon.svg#icon-logo-1 ">
                         </use></svg></a>
                     </li>
                     <li class="our-client-list__item ">
-                        <a class="our-client-list__link " href="./index.htm ">
+                        <a class="our-client-list__link " href="./index.htm " aria-label="web site client">
                             <svg width="40px " height="52px ">
                             <use href="./photo/icon.svg#icon-logo-2 ">
                         </use></svg></a>
                     </li>
                     <li class="our-client-list__item ">
-                        <a class="our-client-list__link " href="./index.htm ">
+                        <a class="our-client-list__link " href="./index.htm " aria-label="web site client">
                             <svg width="41px " height="42.6px ">
                             <use href="./photo/icon.svg#icon-logo-3 ">
                         </use></svg></a>
                     </li>
                     <li class="our-client-list__item ">
-                        <a class="our-client-list__link " href="./index.htm ">
+                        <a class="our-client-list__link " href="./index.htm " aria-label="web site client">
                             <svg width="80px " height="42px ">
                             <use href="./photo/icon.svg#icon-logo-4 ">
                         </use></svg></a>
                     </li>
                     <li class="our-client-list__item ">
-                        <a class="our-client-list__link " href="./index.htm ">
+                        <a class="our-client-list__link " href="./index.htm " aria-label="web site client">
                             <svg width="59px " height="47px ">
                             <use href="./photo/icon.svg#icon-logo-5 ">
                         </use></svg></a>
                     </li>
                     <li class="our-client-list__item ">
-                        <a class="our-client-list__link " href="./index.htm ">
+                        <a class="our-client-list__link " href="./index.htm " aria-label="web site client">
                             <svg width="88.48px " height="45.44px ">
                             <use href="./photo/icon.svg#icon-logo-6 ">
                         </use></svg></a>
@@ -441,19 +442,19 @@
                 <h3 class="general-social-link-box__title ">ПРИСОЕДИНЯЙТЕСЬ</h3>
                 <ul class="general-social-link-box__list ">
                     <li class="general-social-link-box__item ">
-                        <a class="general-social-link-box__link " href="https://www.instagram.com/"><svg  width="20px " height="20px ">
+                        <a class="general-social-link-box__link " href="https://www.instagram.com/" aria-label="Instagram"><svg  width="20px " height="20px ">
                             <use href="./photo/icon.svg#icon-instagram "></use></svg></a>
                     </li>
                     <li class="general-social-link-box__item ">
-                        <a class="general-social-link-box__link " href="https://twitter.com/  "><svg  width="20px " height="20px ">
+                        <a class="general-social-link-box__link " href="https://twitter.com/  " aria-label="twitter"><svg  width="20px " height="20px ">
                             <use href="./photo/icon.svg#icon-Group "></use></svg></a>
                     </li>
                     <li class="general-social-link-box__item ">
-                        <a class="general-social-link-box__link " href="https://www.facebook.com/ "><svg  width="20px " height="20px ">
+                        <a class="general-social-link-box__link " href="https://www.facebook.com/ " aria-label="facebook"><svg  width="20px " height="20px ">
                             <use href="./photo/icon.svg#icon-facebook "></use></svg></a>
                     </li>
                     <li class="general-social-link-box__item ">
-                        <a class="general-social-link-box__link " href="https://www.linkedin.com/ "><svg  width="20px " height="20px ">
+                        <a class="general-social-link-box__link " href="https://www.linkedin.com/ " aria-label="linkedin"><svg  width="20px " height="20px ">
                             <use href="./photo/icon.svg#icon-linkedin "></use></svg></a>
                     </li>
                 </ul>
@@ -462,11 +463,12 @@
                 <h3 class="subscribe-box__title ">ПОДПИШИСЬ НА РАССЫЛКУ</h3>
                 <div class="subscribe-box-form ">
                     <form action="distribution ">
-                        <label for="subscribe"></label>
-                        <input class="subscribe-box-form__input-form " type="mail " name="mail " id="subscribe " placeholder="E-mail ">
+                        <label for="subscribe">
+                            <input class="subscribe-box-form__input-form " type="mail " name="mail " id="subscribe " placeholder="E-mail ">
+                        </label>
                     </form>
                 </div>
-                <button class="subscribe-btn "> 
+                <button class="subscribe-btn " aria-label="subscribe"> 
                     <div class="subscribe-btn__label "> 
                         <span class="subscribe-btn__title " >ПОДПИСАТЬСЯ</span>
                         <svg class="subscribe-btn__svg " width="24px " height="24px ">
