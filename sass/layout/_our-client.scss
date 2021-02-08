@@ -4,18 +4,14 @@
                padding-bottom: 60px;
                display: flex;
                justify-content: space-between;
-               @media screen and(min-width: 1999.9px) {
+               @media screen and(min-width: 1199.9px) {
                    padding-top: 94px;
                    padding-bottom: 94px;
                }
                &__title {
                    margin: 0 auto 30px;
-                   font-family: Roboto;
-                   font-weight: bold;
-                   font-size: 36px;
-                   line-height: 42px;
                    text-align: center;
-                   letter-spacing: 0.03em;
+                   @extend %font-title-section;
                    color: #212121;
                    @media screen and(min-width: 1200px) {
                        margin: 0 auto 50px;
@@ -46,7 +42,6 @@
                    align-items: center;
                    fill: $colorSocialLink;
                    border: 1px solid $colorSocialLink;
-                   //    min-width: 170px;
                    height: 90px;
                    border-radius: 4px;
                    @include animation (fill);

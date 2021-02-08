@@ -1,18 +1,21 @@
 .portfolio-scr {
-    padding-top: 120px;
+    margin-top: 60px;
+    padding-top: 60px;
     padding-bottom: 60px;
     @media screen and (min-width: 768px) {
-        padding-top: 140px;
-        padding-bottom: 94px;
+        margin-top: 80px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     @media screen and (min-width: 1200px) {
-        padding-top: 174px;
+        margin-top: 80px;
+        padding-top: 94px;
         padding-bottom: 94px;
     }
 }
 
 .portfolio-btn {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     &__list {
         display: flex;
     }
@@ -55,6 +58,9 @@
         &__list {
             justify-content: center;
         }
+    }
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
     }
 }
 
